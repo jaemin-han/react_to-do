@@ -4,7 +4,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 // const path = require('path');
-const pgPromise = require('pg-promise');
+// const pgPromise = require('pg-promise');
 
 const homeRoute = require('./routes/index');
 const taskRoute = require('./routes/tasks');
