@@ -4,6 +4,11 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 // const path = require('path');
+const pgPromise = require('pg-promise');
+
+const homeRoute = require('./routes/index');
+const taskRoute = require('./routes/tasks');
+
 
 // This tests to see if we have NODE_ENV in our environment
 // Only load the dotenv if we need it
@@ -26,6 +31,9 @@ app.use((err, req, res, next) => {
   console.log(err);
   res.status(500).send('Something broke!');
 });
+
+app.use('/', homeRoute);
+app.use('/tasks', taskRoute);
 
 // app.use(express.static(path.join(__dirname, 'public')));
 
