@@ -9,8 +9,8 @@ const handleSubmit = (event) => {
   const myForm = event.target;
 
   props.addTask(
-    event.target.taskName.value,
-    event.target.taskDesc.value
+    myForm.taskName.value,
+    myForm.taskDesc.value
     );
   return false;
 };
@@ -20,7 +20,7 @@ return (
 
     <div className="form-group">
       <label className="sr-only" htmlFor="taskName">Task Name</label>
-       <input type="text" className="form-control input-lg" name="taskName" placeholder="Task Name" />
+      <input type="text" className="form-control input-lg" name="taskName" placeholder="Task Name" />
     </div>
 
     <div className="form-group">
