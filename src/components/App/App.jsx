@@ -53,16 +53,20 @@ export default class App extends React.Component {
           </section>
           {/* to do lists */}
           <section className="row">
+
+          {/* to do lists */}
             <article className="col-md-4">
               <h3>Open Items</h3>
-              <TaskList />
+              <TaskList collection={this.state.tasks}/>
             </article>
+          {/* to do lists */}
 
             <article className="col-md-4">
               <h3>Completed Items</h3>
               <TaskList />
             </article>
 
+          {/* to do lists */}
             <article className="col-md-4">
               <h3>Deleted Items</h3>
               <TaskList />
